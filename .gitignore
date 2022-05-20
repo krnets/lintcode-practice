@@ -1,0 +1,43 @@
+node_modules/
+incomplete/
+.vscode/
+__pycache__/
+.wolf*
+python-test-framework/
+.pytest_cache/
+out/
+*.class
+.idea/
+venv/
+
+# gradle build files and folders
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+
+# c# build files and folders
+bin/
+obj/
+.vs/
+*.user
+*.sln
+
+# c++ 
+*.exe
+*.obj
+*.log
+*.pdb
+Debug/
+x64/
+Release/
+*.vcxproj*
+
+# undo files
+*~
+*.bak
+
+# kotlin
+settings.gradle.kts
+
