@@ -5,28 +5,17 @@ class SolutionTest {
 
     @Test
     fun BasicTest1() {
-        val head = "1->4->3->2->5->2->null".toListNode()
-        val result = "null".toListNode()
-        assertEquals(result, Solution().partition(head, 0))
+        val head = "null".toListNode()
+        val result = Solution().partition(head, 0)
+        val expected = "null"
+        assertEquals(expected, listToString(result))
     }
 
     @Test
     fun BasicTest2() {
         val head = "1->4->3->2->5->2->null".toListNode()
-        val result = "1->2->2->4->3->5->null".toListNode()
-        assertEquals(result, Solution().partition(head, 3))
+        val result = Solution().partition(head, 3)
+        val expected = "1->2->2->4->3->5->null"
+        assertEquals(expected, listToString(result))
     }
-}
-
-private fun String.toListNode(): ListNode? {
-    val sentinel = ListNode(0)
-    var currNode: ListNode? = null
-    sentinel.next = currNode
-
-    this.split("->").dropLast(1).map { it.toInt() }.forEach {
-        currNode = ListNode(it)
-        currNode = currNode!!.next
-    }
-
-    return sentinel.next
 }
