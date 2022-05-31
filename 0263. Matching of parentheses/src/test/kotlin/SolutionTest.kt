@@ -5,8 +5,8 @@ class SolutionTest {
 
     @Test
     fun BasicTests() {
-//        assertFalse(Solution().matchParentheses(")("))
-//        assertFalse(Solution().matchParentheses("(]"))
+        assertFalse(Solution().matchParentheses(")("))
+        assertFalse(Solution().matchParentheses("(]"))
         assertTrue(Solution().matchParentheses("()"))
     }
 }
