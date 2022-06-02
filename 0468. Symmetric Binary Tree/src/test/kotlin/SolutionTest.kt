@@ -1,6 +1,5 @@
-import org.junit.Test
-import kotlin.test.assertFalse
-import kotlin.test.assertTrue
+import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class SolutionTest {
 

@@ -1,10 +1,10 @@
-import org.junit.Assert.*
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class SolutionTest {
 
     @Test
     fun BasicTests() {
-        assertArrayEquals(intArrayOf(3, 4, 6), Solution().getUniqueArray(intArrayOf(3, 4, 3, 6)))
+        assertContentEquals(intArrayOf(3, 4, 6), Solution().getUniqueArray(intArrayOf(3, 4, 3, 6)))
     }
 }

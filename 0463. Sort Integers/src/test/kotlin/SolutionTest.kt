@@ -1,5 +1,5 @@
-import org.junit.Assert.*
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class SolutionTest {
 
@@ -8,7 +8,7 @@ class SolutionTest {
         val arr = intArrayOf(3, 2, 1, 4, 5)
         val res = intArrayOf(1, 2, 3, 4, 5)
         Solution().sortIntegers(arr)
-        assertArrayEquals(res, arr)
+        assertContentEquals(res, arr)
     }
 
     @Test
@@ -16,6 +16,6 @@ class SolutionTest {
         val arr = intArrayOf(1, 1, 2, 1, 1)
         val res = intArrayOf(1, 1, 1, 1, 2)
         Solution().sortIntegers(arr)
-        assertArrayEquals(res, arr)
+        assertContentEquals(res, arr)
     }
 }

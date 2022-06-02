@@ -1,5 +1,5 @@
-import org.junit.Assert.assertArrayEquals
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class SolutionTest {
 
@@ -8,6 +8,6 @@ class SolutionTest {
         val original = mutableListOf(4, 5, 1, 2, 3)
         val expected = intArrayOf(1, 2, 3, 4, 5)
         Solution().recoverRotatedSortedArray(original)
-        assertArrayEquals(expected, original.toIntArray())
+        assertContentEquals(expected, original.toIntArray())
     }
 }

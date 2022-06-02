@@ -1,10 +1,10 @@
-import org.junit.Assert.*
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class SolutionTest {
 
     @Test
     fun BasicTests() {
-        assertEquals(false, Solution().isPowerOfTwo(3))
+        assertFalse(Solution().isPowerOfTwo(3))
     }
 }

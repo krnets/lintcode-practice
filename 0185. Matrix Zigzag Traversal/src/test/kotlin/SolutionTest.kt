@@ -1,5 +1,5 @@
-import org.junit.Assert.*
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class SolutionTest {
 
@@ -12,6 +12,6 @@ class SolutionTest {
         )
         val expected = intArrayOf(1, 2, 5, 9, 6, 3, 4, 7, 10, 11, 8, 12)
 
-        assertArrayEquals(expected, Solution().printZMatrix(matrix))
+        assertContentEquals(expected, Solution().printZMatrix(matrix))
     }
 }

@@ -1,10 +1,10 @@
-import org.junit.Assert.assertArrayEquals
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import kotlin.test.*
 
 class SolutionTest {
 
     @Test
     fun BasicTests() {
-        assertArrayEquals(intArrayOf(1, 3, 2, 4), Solution().interleavedArray(intArrayOf(1, 2), intArrayOf(3, 4)))
+        assertContentEquals(intArrayOf(1, 3, 2, 4), Solution().interleavedArray(intArrayOf(1, 2), intArrayOf(3, 4)))
     }
 }
