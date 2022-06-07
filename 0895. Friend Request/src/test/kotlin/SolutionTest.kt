@@ -5,8 +5,8 @@ class SolutionTest {
 
     @Test
     fun BasicTests() {
-//        assertEquals(1, Solution().friendRequest(intArrayOf(10, 39, 50)))
-//        assertEquals(1, Solution().friendRequest(intArrayOf(101, 79, 102)))
+        assertEquals(1, Solution().friendRequest(intArrayOf(10, 39, 50)))
+        assertEquals(1, Solution().friendRequest(intArrayOf(101, 79, 102)))
         assertEquals(
             39080, Solution().friendRequest(
                 intArrayOf(

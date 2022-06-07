@@ -5,7 +5,7 @@ class SolutionTest {
 
     @Test
     fun BasicTests() {
-//        assertEquals(1, Solution().musicPairs(intArrayOf(1, 2, 59, 60)))
+        assertEquals(1, Solution().musicPairs(intArrayOf(1, 2, 59, 60)))
         assertEquals(
             41,
             Solution().musicPairs(
