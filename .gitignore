@@ -41,4 +41,6 @@ Release/
 
 # kotlin
 settings.gradle.kts
+gradle.properties
+
 
