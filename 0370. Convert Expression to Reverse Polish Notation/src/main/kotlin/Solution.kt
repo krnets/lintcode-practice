@@ -7,44 +7,29 @@ class Solution {
      */
     fun convertToRPN(expression: Array<String>): List<String> {
         val list = mutableListOf<String>()
-        val stack = Stack<String>()
-        val ops = "+-*/"
+        val opStack = ArrayDeque<String>()
+        val precMap = mapOf("(" to 1, "+" to 2, "-" to 2, "*" to 3, "/" to 3)
 
-        for (x in expression) {
+        for (token in expression) {
 
-            if (!"()".contains(x)) {
+            if (!precMap.containsKey(token) && token != ")")
+                list.add(token)
+            else if (token == "(")
+                opStack.push("(")
+            else if (token == ")") {
+                while (opStack.peek() != "(")
+                    list.add(opStack.pop())
 
-                if (ops.contains(x)) {
+                opStack.pop()
+            } else {
+                while (opStack.isNotEmpty() && precMap[opStack.peek()]!! >= precMap[token]!!)
+                    list.add(opStack.pop())
 
-                    if (ops.contains(stack.peek())) {
-
-                        val op = stack.pop()
-                        val a = stack.pop()
-                        list.add(a)
-                        list.add(x)
-                        list.add(op)
-
-                    } else {
-                        stack.push(x)
-                    }
-                } else {
-                    stack.push(x)
-                }
+                opStack.push(token)
             }
         }
+        list.addAll(opStack)
 
         return list
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
