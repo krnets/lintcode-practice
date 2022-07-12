@@ -1,18 +1,17 @@
 class Solution {
     fun subsets(nums: IntArray): List<IntArray> {
-        val result = mutableListOf(mutableListOf<Int>())
+        val subs = MutableList(1 shl nums.size) { mutableListOf<Int>() }
 
-        for (n in nums) {
+        for (i in subs.indices) {
+            for (j in nums.indices) {
 
-            for (i in result.indices) {
-
-                val sub = mutableListOf<Int>()
-                sub.addAll(result[i])
-                sub.add(n)
-                result.add(sub)
+                if (1 == i shr j and 1) {
+                    subs[i].add(nums[j])
+                }
             }
         }
 
-        return result.map { it.toIntArray() }
+        return subs.map { it.toIntArray() }
     }
 }
+
